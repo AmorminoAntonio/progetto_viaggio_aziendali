@@ -24,5 +24,5 @@ public class PrenotazioneDTO {
 
     @NotNull(message = "questo è un campo obbligatorio")
     @NotBlank(message = "questo risulta vuoto")
-    private LocalDate dataPrenotazione;
+    private String dataPrenotazione;
 }

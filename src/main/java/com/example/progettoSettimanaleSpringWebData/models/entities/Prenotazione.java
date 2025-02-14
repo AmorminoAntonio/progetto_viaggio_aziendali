@@ -23,6 +23,6 @@ public class Prenotazione {
 
     @Column(nullable = false)
     private LocalDate dataPrenotazione;
-    private PreferenzaDiVolo preferenzaDiVolo;
-    private TipoAlloggio tipoAlloggio;
+    private String preferenzaDiVolo;
+    private String tipoAlloggio;
 }

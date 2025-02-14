@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -24,8 +22,8 @@ public class Viaggio {
 
     @Column(nullable = false)
     private String destinazione;
-    private LocalDate dataViaggio;
-    private StatoDelViaggio statoDelViaggio;
+    private String dataViaggio;
+    private String statoDelViaggio;
 
     @OneToMany
     @JoinColumn(name = "id_viaggio")
