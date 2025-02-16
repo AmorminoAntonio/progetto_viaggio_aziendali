@@ -1,28 +1,23 @@
 package com.example.progettoSettimanaleSpringWebData.models.dto;
 
-import com.example.progettoSettimanaleSpringWebData.models.entities.Dipendente;
-import com.example.progettoSettimanaleSpringWebData.models.entities.Viaggio;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@NoArgsConstructor
+
 @Data
 public class PrenotazioneDTO {
+    @NotNull(message = "Il campo viaggio è obbligatorio")
+    private long viaggio_id;
 
-    @NotNull(message = "questo è un campo obbligatorio")
-    @NotBlank(message = "questo risulta vuoto")
-    private Viaggio viaggioId;
+    @NotNull(message = "Il campo dipendente è obbligatorio")
+    private long dipendente_id;
 
-    @NotNull(message = "questo è un campo obbligatorio")
-    @NotBlank(message = "questo risulta vuoto")
-    private Dipendente dipendenteId;
+    @NotNull(message = "Il campo data è obbligatorio")
+    private LocalDate data;
 
-    @NotNull(message = "questo è un campo obbligatorio")
-    @NotBlank(message = "questo risulta vuoto")
-    private String dataPrenotazione;
+    @Size(max = 200, message = "Le preferenze possono avere max 200 caratteri")
+    private String notePreferenze;
 }
